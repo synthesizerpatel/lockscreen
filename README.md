@@ -28,8 +28,17 @@ Control-Option-Delete. If you hook up a PC keyboard, it's really the same key co
 
 # Credits #
 
-The bulk of this code is from Apple's own documentation with a little cut/paste from random sources I ran across, I can only
-really take credit for smooshing it all together and packaging up an app.
+The bulk of this code is from Apple's own documentation with a little cut/paste from random sources I ran across:
+I can really take credit for smooshing it all together and packaging up an app.
+
+    For the StatusMenu code:
+
+        http://cocoatutorial.grapewave.com/2010/01/creating-a-status-bar-application/
+
+    For the hotkey example code:
+
+        http://dbachrach.com/blog/2005/11/program-global-hotkeys-in-cocoa-easily/
+
 
 Happy hacking!
 
