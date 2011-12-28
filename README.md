@@ -26,10 +26,17 @@ Control-Option-Delete. If you hook up a PC keyboard, it's really the same key co
 
     This is built using the 10.7 SDK, I have no idea if this program will work on 10.6 or earlier, I don't have the ability to test on any other operating systems, if someone else wishes to build/test this and contribute a modified Xcode build scheme I'll be happy to include it. 
 
+# Credits #
+
+The bulk of this code is from Apple's own documentation with a little cut/paste from random sources I ran across, I can only
+really take credit for smooshing it all together and packaging up an app.
+
 Happy hacking!
 
 Nathan Ramella (aka synthesizer patel) 
 
 webpage: [remix.net](http://www.remix.net/)
+
+lion installer: [lockscreen.zip](http://www.remix.net/lockscreen.zip)
 
 email: [nar@hush.com](mail://nar@hush.com)
