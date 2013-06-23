@@ -2,7 +2,7 @@ lockscreen 1.0
 ---------------
 
 # UPDATE 2013-06-22 - Was able to successfully compile the project using 10.8 SDK on a 64 bit Mountain Lion box
-We still got mojo!
+We still got mojo! Wow this font is big!
 
 # Abstract #
 lockscreen.app provides a global-hotkey listener for the Control-Alt-Delete key-chord historically known as
