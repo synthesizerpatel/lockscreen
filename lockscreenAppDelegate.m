@@ -40,7 +40,7 @@ OSStatus OnHotKeyEvent(EventHandlerCallRef nextHandler,EventRef theEvent,void *u
 
 // Action for connecting back to the project website
 -(void)showAbout:id {
-    [[NSWorkspace sharedWorkspace] openURL:[NSURL URLWithString:@"http://www.remix.net/blog/"]];
+    [[NSWorkspace sharedWorkspace] openURL:[NSURL URLWithString:@"http://www.remix.net/"]];
 }
 
 // Register global hotkeys as per Apple's documentation
