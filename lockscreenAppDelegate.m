@@ -14,15 +14,15 @@
 
 OSStatus OnHotKeyEvent(EventHandlerCallRef nextHandler,EventRef theEvent,void *userData)
 {
-	EventHotKeyID hkCom;
-	GetEventParameter(theEvent, kEventParamDirectObject, typeEventHotKeyID, NULL, sizeof(hkCom), NULL, &hkCom);
-	int l = hkCom.id;
-	switch (l) {
-		case 1: // Control-Alt-Delete maps to screen locking
-			NSLog (@"control-alt-delete recieved");
-			[[ScreenSaverController controller] screenSaverStartNow];
-			break;
-	}
+    EventHotKeyID hkCom;
+    GetEventParameter(theEvent, kEventParamDirectObject, typeEventHotKeyID, NULL, sizeof(hkCom), NULL, &hkCom);
+    int l = hkCom.id;
+    switch (l) {
+	case 1: // Control-Alt-Delete maps to screen locking
+		NSLog (@"control-alt-delete recieved");
+		[[ScreenSaverController controller] screenSaverStartNow];
+		break;
+        }
 	return noErr;
 }
 
@@ -47,22 +47,22 @@ OSStatus OnHotKeyEvent(EventHandlerCallRef nextHandler,EventRef theEvent,void *u
 
 -(void)registerHotKeys
 {	
-	EventHotKeyRef gMyHotKeyRef;
-	EventHotKeyID gMyHotKeyID;
-	EventTypeSpec eventType;
-	eventType.eventClass=kEventClassKeyboard;
-	eventType.eventKind=kEventHotKeyPressed;	
+    EventHotKeyRef gMyHotKeyRef;
+    EventHotKeyID gMyHotKeyID;
+    EventTypeSpec eventType;
+    eventType.eventClass=kEventClassKeyboard;
+    eventType.eventKind=kEventHotKeyPressed;	
 
-	NSLog(@"registering hotkeys");
-	InstallApplicationEventHandler(&OnHotKeyEvent, 1, &eventType, (void *)self, NULL);
-	gMyHotKeyID.signature='htk1';
-	gMyHotKeyID.id=1;	
-	RegisterEventHotKey(117, controlKey+optionKey, gMyHotKeyID, GetApplicationEventTarget(), 0, &gMyHotKeyRef);
+    NSLog(@"registering hotkeys");
+    InstallApplicationEventHandler(&OnHotKeyEvent, 1, &eventType, (void *)self, NULL);
+    gMyHotKeyID.signature='htk1';
+    gMyHotKeyID.id=1;	
+    RegisterEventHotKey(117, controlKey+optionKey, gMyHotKeyID, GetApplicationEventTarget(), 0, &gMyHotKeyRef);
 }
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification 
 {
-	[self registerHotKeys];
+    [self registerHotKeys];
     [self activateStatusMenu];
 }
 @end
